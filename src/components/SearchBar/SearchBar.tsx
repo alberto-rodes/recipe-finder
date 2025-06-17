@@ -11,7 +11,6 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   const handleClear = () => {
     setValue("");
-    onSearch("");
   };
 
   useEffect(() => {
