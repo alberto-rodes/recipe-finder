@@ -24,7 +24,6 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   return (
     <TextField
-      fullWidth
       label="Search recipes"
       variant="outlined"
       value={value}
@@ -33,11 +32,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
         input: {
           endAdornment: value && (
             <InputAdornment position="end">
-              <IconButton
-                onClick={handleClear}
-                edge="end"
-                aria-label="Clear search"
-              >
+              <IconButton onClick={handleClear} aria-label="Clear search">
                 <ClearIcon />
               </IconButton>
             </InputAdornment>
