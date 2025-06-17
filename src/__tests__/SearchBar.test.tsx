@@ -7,13 +7,18 @@ jest.useFakeTimers();
 describe("SearchBar", () => {
   it("renders text field", () => {
     render(<SearchBar onSearch={jest.fn()} />);
-    expect(screen.getByRole("textbox")).toBeInTheDocument();
+
+    const input = screen.getByRole("textbox");
+
+    expect(input).toBeInTheDocument();
   });
 
   it("calls onSearch with debounce when input changes", () => {
     const onSearchMock = jest.fn();
     render(<SearchBar onSearch={onSearchMock} />);
+
     const input = screen.getByRole("textbox");
+
     fireEvent.change(input, { target: { value: "pasta" } });
 
     act(() => {
