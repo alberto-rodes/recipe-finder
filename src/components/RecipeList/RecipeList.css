@@ -1,0 +1,11 @@
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-list-empty {
+  text-align: center;
+  margin-top: 2rem;
+  color: gray;
+}

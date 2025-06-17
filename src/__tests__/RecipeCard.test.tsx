@@ -11,7 +11,7 @@ describe("RecipeCard", () => {
     mockNavigate.mockClear();
   });
 
-  const defaultProps = {
+  const testRecipe = {
     id: "1",
     title: "test",
     description: "test description",
@@ -19,7 +19,7 @@ describe("RecipeCard", () => {
   };
 
   it("renders title, image, and description", () => {
-    render(<RecipeCard {...defaultProps} />);
+    render(<RecipeCard recipe={testRecipe} />);
 
     const title = screen.getByText("test");
     const image = screen.getByRole("img");
@@ -31,7 +31,7 @@ describe("RecipeCard", () => {
   });
 
   it("calls navigate with correct id when clicked", () => {
-    render(<RecipeCard {...defaultProps} />);
+    render(<RecipeCard recipe={testRecipe} />);
 
     const card = screen.getByRole("button");
 

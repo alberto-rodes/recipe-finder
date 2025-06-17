@@ -1,15 +1,15 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { IRecipe } from "@/types";
 import { useNavigate } from "react-router-dom";
 import "./RecipeCard.css";
 
 interface RecipeCardProps {
-  id: string;
-  title: string;
-  description?: string;
-  image: string;
+  recipe: IRecipe;
 }
 
-const RecipeCard = ({ id, title, description, image }: RecipeCardProps) => {
+const RecipeCard = ({ recipe }: RecipeCardProps) => {
+  const { id, title, description, image } = recipe;
+
   const navigate = useNavigate();
 
   const handleClick = () => {

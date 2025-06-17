@@ -12,9 +12,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2rem;
+  padding: 2rem 4rem;
   max-width: 1024px;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem);
   gap: 1rem;
 }
